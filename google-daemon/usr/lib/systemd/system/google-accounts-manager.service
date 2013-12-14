@@ -8,7 +8,7 @@ Requires=network.target
 ExecStart=/usr/share/google/google_daemon/manage_accounts.py --daemon
 ExecStop=/bin/kill -TERM $MAINPID
 PIDFile=/var/run/google_daemon.pid
-Type=simple
+Type=forking
 
 [Install]
 WantedBy=multi-user.target
