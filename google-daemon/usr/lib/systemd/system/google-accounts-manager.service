@@ -5,7 +5,6 @@ Before=sshd.service
 Requires=network.target
 
 [Service]
-Type=simple
 ExecStart=/usr/share/google/google_daemon/manage_accounts.py
 
 [Install]

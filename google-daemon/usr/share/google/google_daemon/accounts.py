@@ -394,5 +394,7 @@ class Accounts(object):
     # Override the old authorized keys file with the new one.
     self.system.MoveFile(new_keys_path, authorized_keys_file)
 
+    self.os.chown(authorized_keys_file, uid, gid)
+
     # Set SELinux context, if applicable to this system
     self.SetSELinuxContext(authorized_keys_file)

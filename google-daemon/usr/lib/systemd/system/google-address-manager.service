@@ -4,7 +4,6 @@ After=network.target
 Requires=network.target
 
 [Service]
-Type=simple
 ExecStart=/usr/share/google/google_daemon/manage_addresses.py
 
 [Install]
